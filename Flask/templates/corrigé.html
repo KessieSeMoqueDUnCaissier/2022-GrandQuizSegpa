@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Le Giga-Quiz Du Segpa &#128563</title>
+		<link rel="stylesheet" href="/static/deco.css">
+	</head>
+    <body>
+        <div class="Règles">
+            <p style="float: left;"><a href="/"><img id="image2" src="/static/images/back.png"/></a></p>
+			<h1>Petit tricheur que vous êtes!</h1>
+        </div>
+        <div class="QCM" style="clear: left;">			
+            <ul>
+            {% for question in questions %}
+                <h2 id=Resultat>{{ question[0] }}: {{ question[1] }}</h2>
+                <h2>Réponse: {{ question[2] }}</h2>
+                <br><br>
+            {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Le Giga-Quiz Du Segpa &#128563</title>
+		<link rel="stylesheet" href="/static/deco.css">
+	</head>
+    <body>
+        <div class="Règles">
+            <p style="float: left;"><a href="/"><img id="image2" src="/static/images/back.png"/></a></p>
+			<h1>Bien, l'épreuve est terminée, voici vos résultats!</h1>
+        </div>
+
+        <div style="clear: left;">
+            <h2 id="Resultats">Vous avez une réussite générale de {{ moyenne }} %</h2>
+            <ul id="u1">
+                    <li>Les Sciences de la Vie et de la Terre: {{ score[0] }}%
+                    <li>Les Mathématiques: {{ score[1] }}%</li>
+                    <li>La Culture Générale: {{ score[2] }}%</li>
+                    <li>La Musique: {{ score[3] }}%</li>
+                    <li>L'Espagnol: {{ score[4] }}%</li>
+            </ul>	
+        </div>
+        <h1>Utilisez les barres de recherche pour afficher les réponses à vos questions!</h1>
+        <div class="QCM2" style="clear: left;">		
+            <ul>
+                <form action="/corrigé" method="post">
+                    <label>Question</label> : <input type="text" name="Question"/>
+                    <label>Catégorie</label> : <input type="text" name="Catégorie"/>
+            </ul>
+        <input class="styled" type="submit" value="On copie-colle 🛫"/>
+        </form>
+        <br><br>
+        <h1>Cliquez sur Nick Avocado pour finir le Quiz!</h1>
+        <a href="gg"><img id="Cr2" src="/static/images/Avocado.png"/></a>
+        </div>
+    </body>
+</html>

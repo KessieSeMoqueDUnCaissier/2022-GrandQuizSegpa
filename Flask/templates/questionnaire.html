@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Le Giga-Quiz Du Segpa &#128563</title>
+		<link rel="stylesheet" href="/static/deco.css">
+	</head>
+    <body>
+        <div class="Règles">
+            <p style="float: left;"><a href="/"><img id="image2" src="/static/images/back.png"/></a></p>
+            <p>Vous serez intérrogés sur une série de 25 questions avec des domaines différents. Vos réponses devront être brèves.
+                Tous les mots doivent s'écrire tels de noms propres. Lorsqu'un QCM se présente à vous, ne répondez qu'avec la lettre. 
+                BON COURAGE!!!</p>
+            <h1>
+                <audio controls id="HAHA">
+                <source src="static\HeeHeeHaw.mp3" type="audio/mpeg">
+                </audio>
+                <img id="Cr" src="/static/images/heeheehaw.png"/>
+            </h1>
+        </div>
+        <div class="QCM" style="clear: left;">			
+            <ul>
+                {% for question in questions %}
+                    <h2 id="Resultat">{{ question[3] }}- [{{ question[0] }}]: {{ question[1] }}</h2>
+                <br>
+                {% endfor %}
+            </ul>
+            <form action="/resultats" method="post">
+                <label>N°</label> : <input  id="label" type="text" name= 'ID'/>
+                <label>Réponse</label> : <input type="text" name= 'Réponse'/>
+            <input class="styled" type="submit" value="T'as pas le brevet &#128563" />
+            </form>
+        </div>
+    </body>
+</html>
