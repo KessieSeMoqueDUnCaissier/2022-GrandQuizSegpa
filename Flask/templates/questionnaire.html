@@ -22,14 +22,14 @@
             <ul>
                 {% for question in questions %}
                     <h2 id="Resultat">{{ question[3] }}- [{{ question[0] }}]: {{ question[1] }}</h2>
+			<form action="/resultats" method="post">
+				<label>N°</label> : <input  id="label" type="text" name= 'ID'/>
+				<label>Réponse</label> : <input type="text" name= 'Réponse'/>
+				<input class="styled" type="submit" value="Validez &#128563" />
+			</form>
                 <br>
                 {% endfor %}
             </ul>
-            <form action="/resultats" method="post">
-                <label>N°</label> : <input  id="label" type="text" name= 'ID'/>
-                <label>Réponse</label> : <input type="text" name= 'Réponse'/>
-            <input class="styled" type="submit" value="T'as pas le brevet &#128563" />
-            </form>
         </div>
     </body>
 </html>
