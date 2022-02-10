@@ -219,5 +219,5 @@ def bilan():
 # Lancement de l'application web et son serveur
 # accessible à l'URL : http://127.0.0.1:1664/
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=1664, debug=True)
+    app.run(host="0.0.0.0", port=1664, debug=False)
 
